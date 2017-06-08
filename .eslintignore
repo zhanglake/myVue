@@ -1,4 +1,7 @@
 build/*.js
 config/*.js
 src/components/*.vue
+src/components/echarts/*.vue
+src/components/table/*.vue
 src/views/*.vue
+src/echarts/*.js

@@ -24,14 +24,26 @@
                     <em-efficiency></em-efficiency>
                 </div>
             </el-col>
-            <el-col :span="12"><div class="grid-content bg-purple-light"></div></el-col>
+            <el-col :span="12">
+                <div class="grid-content">
+                    <service></service>
+                </div>
+            </el-col>
         </el-col>
         <el-col :span="9">
             <el-col :span="24"><div class="grid-content bg-purple" style="height: 320px;"></div></el-col>
         </el-col>
         <el-col :span="3">
-            <el-col :span="24"><div class="grid-content bg-purple"></div></el-col>
-            <el-col :span="24"><div class="grid-content bg-purple-light"></div></el-col>
+            <el-col :span="24">
+                <div class="grid-content">
+                    <img src="../assets/img1.png"></img>
+                </div>
+            </el-col>
+            <el-col :span="24">
+                <div class="grid-content">
+                    <img src="../assets/img2.png"></img>
+                </div>
+            </el-col>
         </el-col>
         <!-- 第三层 -->
         <el-col :span="3" style="position: relative;">
@@ -46,12 +58,28 @@
                 <patrol></patrol>
             </div>
         </el-col>
+        <el-col :span="3">
+            <div class="grid-content">
+                <emtype></emtype>
+            </div>
+        </el-col>
+        <el-col :span="3">
+            <div class="grid-content">
+                <eqstatus></eqstatus>
+            </div>
+        </el-col>
         <el-col :span="3"><div class="grid-content bg-purple"></div></el-col>
         <el-col :span="3"><div class="grid-content bg-purple-light"></div></el-col>
         <el-col :span="3"><div class="grid-content bg-purple"></div></el-col>
-        <el-col :span="3"><div class="grid-content bg-purple-light"></div></el-col>
-        <el-col :span="3"><div class="grid-content bg-purple"></div></el-col>
-        <el-col :span="3"><div class="grid-content bg-purple-light"></div></el-col>
+        <el-col :span="3">
+            <div class="grid-content">
+                <div style="width: 100%;height: 10%;font-size: 12px;">
+                    <span style="float: left;">大楼平面图</span>
+                    <span style="float: right;">人员 在岗22人 总数120人</span>
+                </div>
+                <img src="../assets/img3.png" style="height: 90%;"></img>
+            </div>
+        </el-col>
     </el-row>
 </template>
 
@@ -107,6 +135,10 @@
     width: 50px;
     border-radius: 25px;
   }
+  img {
+      width: 100%;
+      height: 100%;
+  }
 </style>
 
 <script>
@@ -115,6 +147,9 @@
     import emefficiency from '../components/echarts/em-efficiency.vue'
     import workorder from '../components/echarts/workorder.vue'
     import patrol from '../components/echarts/patrol.vue'
+    import eqstatus from '../components/echarts/eqstatus.vue'
+    import emtype from '../components/echarts/emtype.vue'
+    import service from '../components/echarts/service.vue'
     import myproject from '../components/table/project.vue'
 
     export default {
@@ -129,7 +164,10 @@
             'project-efficiency': projectefficiency,
             'em-efficiency': emefficiency,
             'workorder': workorder,
-            'patrol': patrol
+            'patrol': patrol,
+            'eqstatus': eqstatus,
+            'emtype': emtype,
+            'service': service
         }
     }
 </script>

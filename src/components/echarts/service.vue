@@ -1,5 +1,5 @@
 <template>
-    <div id="project-efficiency" style="width: 100%;height: 150px;"></div>
+    <div id="service" style="width: 100%;height: 150px;"></div>
 </template>
 
 <script>
@@ -12,7 +12,7 @@
                 option: {
                     color: ['#3398DB'],
                     title: {
-                        text: '项目效率值',
+                        text: '服务满意度',
                         textStyle: {
                             fontWeight: 100,
                             fontSize: '8px'
@@ -54,7 +54,7 @@
 
         },
         mounted () {
-            this.map = echarts.init(document.getElementById('project-efficiency'));
+            this.map = echarts.init(document.getElementById('service'));
             this.map.setOption(this.option);
         }
     }
